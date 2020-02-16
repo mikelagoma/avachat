@@ -3,6 +3,9 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+#advanced-settings{
+  display: none !important;
+}
 #appID{
   display: none !important;
 }

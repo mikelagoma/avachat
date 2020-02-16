@@ -9,14 +9,6 @@
   <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/agora.css") %>" />
 </head>
 <body class="agora-theme">
-  <div class="navbar-fixed">
-    <nav class="agora-navbar">
-      <div class="nav-wrapper agora-primary-bg valign-wrapper">
-        <h5 class="left-align">Avachat Video Call</h5>
-        <a href="https://github.com/AgoraIO/Basic-Video-Call/tree/master/One-to-One-Video/Agora-Web-Tutorial-1to1" class="agora-github-pin"></a>
-      </div>
-    </nav>
-  </div>
   <form id="form" class="row col l12 s12">
     <div class="row container col l12 s12">
       <div class="col" style="min-width: 433px; max-width: 443px">
@@ -32,6 +24,7 @@
               </div>
           </div>
         </div>
+        <div id="advanced-settings">
         <ul class="collapsible card agora-secondary-border" style="margin-top: .4rem; border: 1px ">
           <li>
             <div class="collapsible-header agora-secondary-bg">
@@ -92,6 +85,7 @@
               </div>
           </li>
         </ul>
+        </div>
       </div>
       <div class="col s7">
         <div class="video-grid" id="video">
