@@ -24,7 +24,7 @@
           <div class="row card-content" style="margin-bottom: 0px;">
               <div class="row" style="margin: 0">
                 <div class="col s12">
-                <button class="btn btn-raised btn-primary waves-effect waves-light" id="join">JOIN</button>
+                <%# <button class="btn btn-raised btn-primary waves-effect waves-light" id="join">JOIN</button> %>
                 <%# <button class="btn btn-raised btn-primary waves-effect waves-light" id="leave">LEAVE</button> %>
                 <button class="btn btn-raised btn-primary waves-effect waves-light" id="publish">Connect</button>
                 <button class="btn btn-raised btn-primary waves-effect waves-light" id="unpublish">Disconnect</button>
@@ -387,8 +387,6 @@
          *      All users in the same channel should have the same type (number or string) of uid.
          *      If you use a number as the user ID, it should be a 32-bit unsigned integer with a value ranging from 0 to (232-1).
         **/
-        var token = process.env.TOKEN
-        var token = process.env.UID
         rtc.client.join(option.token ? option.token : null, option.channel, option.uid ? +option.uid : null, function (uid) {
           Toast.notice("join channel: " + option.channel + " success, uid: " + uid);
           console.log("join channel: " + option.channel + " success, uid: " + uid);
@@ -534,9 +532,9 @@
       var fields = ['appID', 'channel'];
       // var fields = 
 
-      $("#join").on("click", function (e) {
+      // $("#join").on("click", function (e) {
         console.log("join")
-        e.preventDefault();
+        // e.preventDefault();
         var params = serializeformData();
         // console.log(<%= Poison.encode!(@appID) %>)
 
@@ -547,7 +545,7 @@
         if (validator(params, fields)) {
           join(rtc, params);
         }
-      })
+      // })
 
       $("#publish").on("click", function (e) {
         console.log("publish")
